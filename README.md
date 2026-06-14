@@ -28,10 +28,9 @@
 
 | 항목 | 내용 |
 |---|---|
-| 프로젝트명 | 종루이코리아 MES - PL(생산관리) 시스템 |
-| 담당 역할 | 풀스택 개발 (요구사항 분석, 화면/DB 설계, 백엔드·프론트엔드 개발) |
-| 개발 기간 | 20XX.XX ~ 20XX.XX *(작성 필요)* |
-| 인원 구성 | 백엔드 N명 / 프론트엔드 N명 *(작성 필요)* |
+| 프로젝트명 | 종루이코리아 MES -생산관리 시스템 |
+| 담당 역할 | PL, 풀스택 개발 (요구사항 분석, 화면/DB 설계, 백엔드·프론트엔드 개발) |
+| 개발 기간 | 2024.11~ 2025.07 |
 | 사용 기술 | Java, Spring Boot, Vue.js, MySQL |
 
 제조업 특성상 다품종 생산 구조(원소재 → 반제품 → 완제품)를 가진 고객사를 대상으로, **설비-공정-제품**의 매핑 구조를 설계하고 이를 기반으로 생산계획부터 생산실적, 작업일보까지 이어지는 생산관리 전 프로세스를 구축했습니다. 또한 해외 사업장 확장을 고려한 **다국어 지원 구조**를 직접 설계 및 개발했습니다.
@@ -42,12 +41,11 @@
 
 **Backend**
 - Java, Spring Boot
-- MyBatis / JPA *(사용 기술에 맞게 수정)*
+- MyBatis
 - MySQL
 
 **Frontend**
 - Vue.js
-- Vuex / Pinia, Vue Router *(사용 기술에 맞게 수정)*
 
 **기타**
 - 태블릿 / 키오스크 환경 대응 화면 (생산실적 입력)
@@ -200,35 +198,6 @@ flowchart LR
 
 ---
 
-## 🔗 핵심 도메인 ERD
-
-> 전체 ERD가 아닌, 주요 도메인 간 관계를 단순화한 다이어그램입니다.
-
-```mermaid
-erDiagram
-    EQUIPMENT ||--o{ PROCESS : "공정 매핑"
-    EQUIPMENT ||--o{ EQUIPMENT_REPAIR_HIST : "수리 이력"
-    EQUIPMENT ||--o{ EQUIPMENT_DOWN_HIST : "가동중단 이력"
-
-    RAW_MATERIAL ||--o{ SEMI_FINISHED_BOM : "투입"
-    PROCESS ||--o{ SEMI_FINISHED_BOM : "공정 매핑"
-    SEMI_FINISHED_BOM }o--|| SEMI_FINISHED : "생산"
-
-    SEMI_FINISHED ||--o{ FINISHED_BOM : "투입"
-    PROCESS ||--o{ FINISHED_BOM : "공정 매핑"
-    FINISHED_BOM }o--|| FINISHED_GOODS : "생산"
-
-    CUSTOMER ||--o{ PRODUCTION_REQUEST : "생산요청"
-    PRODUCTION_REQUEST ||--o{ PRODUCTION_PLAN : "계획 수립"
-    PRODUCTION_PLAN ||--o{ PRODUCTION_ORDER : "생산지시"
-    PRODUCTION_ORDER ||--o{ DAILY_PRODUCTION_PLAN : "일일 분해"
-    DAILY_PRODUCTION_PLAN ||--o{ PRODUCTION_RESULT : "실적 입력"
-    PRODUCTION_RESULT }o--|| EQUIPMENT : "LOT_NO 채번"
-    FINISHED_GOODS ||--o{ PRODUCTION_RESULT : "대상 제품"
-```
-
----
-
 ## 💡 핵심 기술 포인트
 
 - **설비-공정-제품 매핑 구조 설계**: 단일 설비에 다수 공정을 매핑하고, 원소재 → 반제품 → 완제품으로 이어지는 BOM 체계와 연계되도록 데이터 모델을 설계해 생산계획 산출 및 추적이 가능하도록 구성했습니다.
@@ -241,7 +210,7 @@ erDiagram
 
 ## 🖼 화면 구성
 
-> 보안상 소스코드는 비공개이며, 주요 화면 캡처로 대체합니다. *(스크린샷 이미지 첨부 영역)*
+> 보안상 소스코드는 비공개이며, 주요 화면 캡처로 대체합니다.
 
 | 화면 | 설명 |
 |---|---|
