@@ -1,4 +1,4 @@
-# 🏭 종루이코리아 MES - 생산관리(PL) 시스템
+# 🏭 종루이코리아 MES - 시스템
 
 ![Java](https://img.shields.io/badge/Java-007396?style=flat-square&logo=java&logoColor=white)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white)
@@ -214,9 +214,7 @@ flowchart LR
 
 | 화면 | 설명 |
 |---|---|
-| 설비/공정 관리 화면 | *(이미지 추가)* |
-| BOM / 완제품·반제품 관리 화면 | *(이미지 추가)* |
-| 다국어 관리 화면 | *(이미지 추가)* |
-| 일일생산계획 화면 | *(이미지 추가)* |
-| 생산실적 입력 (키오스크) | *(이미지 추가)* |
-| 작업일보 화면 | *(이미지 추가)* |
+| 설비/공정 관리 화면 | ![설비 관리 화면](./facility.png) |
+| BOM / 완제품·반제품 관리 화면 | ![bom 화면](./bom.png) |
+| 생산관리 화면 (키오스크) |  ![생산관리 화면](./ProductionK.png) |
+| 작업일보 화면 | ![작업일보 화면](./Production.png) |
