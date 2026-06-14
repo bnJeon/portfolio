@@ -384,8 +384,8 @@ flowchart LR
 
 | 화면 | 설명 |
 |---|---|
-| SHOP 상품 목록/상세 화면 | (./ktshop/list.png) |
-| 본인인증 화면 | (./ktshop/pass.png) |
-| 주소 검색 화면 | (./ktshop/address.png) |
-| 결제 화면 | (./ktshop/smartPay.png) |
+| SHOP 상품 목록/상세 화면 | ![SHOP 상품 목록 화면](./ktshop/list.png) |
+| 본인인증 화면 | ![본인인증화면](./ktshop/pass.png) |
+| 주소 검색 화면 | ![주소 검색 화면](./ktshop/address.png) |
+| 결제 화면 | ![결제 화면](./ktshop/smartPay.png) |
 
